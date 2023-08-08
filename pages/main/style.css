@@ -20,6 +20,16 @@ html {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+  transition: 0.4s all;
+  color: #000;
+}
+a:hover {
+  color: #4FBFA5;
+  cursor: pointer;
+}
+
 button {
   transition: 0.4s all;
 }
@@ -121,12 +131,16 @@ button:hover {
   color: #243c2f;
 }
 .nav-ref {
+  color: #fff;
   display: block;
   border-radius: 20px;
   padding: 20px;
 }
 .nav-ref-active {
   background-color: #b7f6e7;
+}
+.nav-ref:hover {
+  color: #243c2f;
 }
 .nav-block {
   display: none;
