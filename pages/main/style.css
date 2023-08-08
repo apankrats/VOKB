@@ -20,12 +20,6 @@ html {
   margin: auto;
 }
 
-a {
-  text-decoration: none;
-  transition: 0.4s all;
-  color: #000;
-}
-
 button {
   transition: 0.4s all;
 }
@@ -125,6 +119,28 @@ button:hover {
 }
 .nav-item > a:hover {
   color: #243c2f;
+}
+.nav-ref {
+  display: block;
+  border-radius: 20px;
+  padding: 20px;
+}
+.nav-ref-active {
+  background-color: #b7f6e7;
+}
+.nav-block {
+  display: none;
+}
+.nav-block-active {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 82px;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 1;
 }
 
 .notice {
