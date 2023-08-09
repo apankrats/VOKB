@@ -17,12 +17,11 @@ function toggleMenu (event) {
 };
 
 // function closeMenu (event) {
-//     if (event.target.matches('.nav-ref-active')) {
-//         event.target.classList.remove('nav-ref-active');
-//         let info = event.target.nextElementSibling;
-//         info.classList.remove('nav-block-active');
+//     if (event.target.classList!='nav-ref') {
+//         navRefs.forEach((el) => el.classList.remove('nav-ref-active'));
+//         navBlocks.forEach((el) => el.classList.remove('nav-block-active'));
 //     }
 // }
 
-// navRefs.forEach((el) => el.addEventListener('click', closeMenu));
 navRefs.forEach((el) => el.addEventListener('click', toggleMenu));
+// navRefs.forEach((el) => el.addEventListener('click', closeMenu));
