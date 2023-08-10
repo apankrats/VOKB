@@ -1,4 +1,25 @@
 .main
+	&-text
+		line-height: 25px
+	&-link
+		text-decoration: underline
+	&-li::before
+		content: "•"
+		padding-right: 7px
+		color: #4FBFA5
+	&-li
+		&-site
+			padding-bottom: 20px
+		&-site::before
+			content: url('../../assets/icons/site.png')
+			position: absolute
+			left: -30px
+		&-docs
+			padding-bottom: 20px
+		&-docs::before
+			content: url('../../assets/icons/download.png')
+			position: absolute
+			left: -30px
 	&-title
 		text-align: center
 		font-size: 35px
@@ -39,3 +60,52 @@
 			width: 500px
 			float: left
 			padding: 20px 40px 40px 0
+	&-profunion
+		&-img
+			width: 200px
+			float: left
+			padding-right: 30px
+		&-refs
+			display: flex
+			justify-content: space-around
+		&-portal, &-info
+			display: flex
+			flex-direction: column
+		&-list
+			list-style: none
+			padding-left: 10px
+			position: relative
+	&-centers
+		padding-bottom: 30px
+		&-title
+			display: flex
+			height: 50px
+			align-items: center
+			justify-content: center
+		&-block
+			display: none
+			background: #fff
+			text-align: left
+			&-active
+				display: block
+		&-li
+			background: #d9eae4
+			margin: 5px
+			cursor: pointer
+			transition: 0.4s all
+			text-align: center
+			position: relative
+			&:hover
+				background: #cee2db
+				cursor: pointer
+			&::after
+				content: "▼"
+				position: absolute
+				right: 30px
+				top: 20px
+				color: #63b9a5
+
+		&-list
+			list-style: none
+			padding-left: 10px
+
