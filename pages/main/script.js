@@ -1,6 +1,6 @@
 // ***navigation***
 
-let navRefs = document.querySelectorAll('.nav-ref');
+let navRefs = document.querySelectorAll('.nav-ref'),
     navBlocks = document.querySelectorAll('.nav-block');
 
 
@@ -30,19 +30,24 @@ navRefs.forEach((el) => el.addEventListener('click', toggleMenu));
 
 // ***centers***
 
-let centerTitle = document.querySelectorAll('.main-centers-title');
+let centerTitle = document.querySelectorAll('.main-centers-title'),
     centerBlocks = document.querySelectorAll('.main-centers-block');
+    // centerBlocksLi = document.querySelectorAll('.main-centers-arrow');
 
 function toggleList (event) {
     if (event.target.matches('.main-centers-title-active')) {
         event.target.classList.remove('main-centers-title-active');
-        let info = event.target.nextElementSibling;
-        info.classList.remove('main-centers-block-active')
+        let symbolLi = event.target.previousElementSibling,
+            info = event.target.nextElementSibling;
+        symbolLi.textContent = '▼';
+        info.classList.remove('main-centers-block-active');
     } else if (event.target.matches('.main-centers-title')) {
         navRefs.forEach((el) => el.classList.remove('main-centers-title-active'));
         navBlocks.forEach((el) => el.classList.remove('main-centers-block-active'));
         event.target.classList.add('main-centers-title-active');
-        let info = event.target.nextElementSibling;
+        let symbolLi = event.target.previousElementSibling,
+            info = event.target.nextElementSibling;
+        symbolLi.textContent = '▲';
         info.classList.add('main-centers-block-active');
     }
 };

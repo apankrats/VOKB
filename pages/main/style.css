@@ -230,8 +230,11 @@ button:hover {
   padding: 20px 0 40px 0;
 }
 .main-img {
-  text-align: center;
   padding: 30px;
+}
+.main-img > img {
+  width: 100%;
+  object-fit: contain;
 }
 .main-wrapper {
   padding: 0 40px 40px 40px;
@@ -240,7 +243,7 @@ button:hover {
   justify-content: space-between;
 }
 .main-card {
-  width: 430px;
+  width: 350px;
   height: 420px;
   margin-bottom: 30px;
 }
@@ -263,7 +266,7 @@ button:hover {
   font-size: 20px;
 }
 .main-parentorg {
-  height: 750px;
+  padding-bottom: 40px;
 }
 .main-parentorg-title {
   padding-top: 20px;
@@ -297,10 +300,12 @@ button:hover {
   padding-bottom: 30px;
 }
 .main-centers-title {
+  position: relative;
   display: flex;
   height: 50px;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 .main-centers-block {
   display: none;
@@ -312,7 +317,7 @@ button:hover {
 }
 .main-centers-li {
   background: #d9eae4;
-  margin: 5px;
+  margin-bottom: 7px;
   cursor: pointer;
   transition: 0.4s all;
   text-align: center;
@@ -322,16 +327,16 @@ button:hover {
   background: #cee2db;
   cursor: pointer;
 }
-.main-centers-li::after {
-  content: "▼";
+.main-centers-arrow {
   position: absolute;
-  right: 30px;
-  top: 20px;
+  right: 40px;
+  top: 18px;
   color: #63b9a5;
+  inline-size: 0;
 }
 .main-centers-list {
   list-style: none;
-  padding-left: 10px;
+  padding: 0;
 }
 
 .notice {
